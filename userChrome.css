@@ -1,0 +1,27 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* show bookmarks toolbar on new tab only */
+/*
+#main-window:not([title^="Google"]) #PersonalToolbar {
+  visibility:collapse !important;
+}
+*/
+
+
+/* AUTOHIDE BOOKMARKS STYLE TWO */
+/*honiantic @ https://www.reddit.com/r/FirefoxCSS/comments/8xg8b1/another_autohide_bookmark_toolbars_thread/ */
+
+#PersonalToolbar{
+    min-height: 30px !important;
+    line-height: 30px !important;
+    margin-top: -35px !important;
+    transition: margin 0.3s cubic-bezier(0.77, 0, 0.175, 1) !important;
+    position: fixed !important;
+    width: 100%;
+}
+#navigator-toolbox:hover #PersonalToolbar{
+    margin-top: 0px !important;
+}
+#nav-bar{
+z-index: 1;
+}
